@@ -40,10 +40,6 @@ export default function Form({selectedNote, setSelectedNote, refreshList, isArch
     setTimeout(() => setStatus(STATUS_INITIAL_VALUE), 3000)
   }, [status])
 
-  useEffect(() => {
-    if (selectedNote) return setVariant('')
-  }, [variant])
-
   const onChangeTitle = (e) => setTitle(e.target.value)
   const onChangeBody = (e) => setBody(e.target.value)
   const onSave = (e) => {
